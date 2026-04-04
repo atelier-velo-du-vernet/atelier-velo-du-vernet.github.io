@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Vélo du Vernet — Réparation vélo Perpignan</title>
+  <meta name="description" content="L'Atelier Vélo du Vernet est votre association bénévole de réparation vélo à Perpignan. Atelier participatif, entretien, remise en état de tous types de vélos." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Favicon (emoji fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== SVG FILTER FOR GRAIN ====== -->
+  <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+    <filter id="grain-filter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+  </svg>
+
+  <!-- ====== GRAIN OVERLAY ====== -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-mark">AVV</span>
+        <span class="nav-logo-text">Atelier Vélo<br>du Vernet</span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#horaires">Horaires</a>
+        <a href="#contact">Contact</a>
+        <span class="status-indicator" id="statusBadge"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-eyebrow reveal">Association bénévole · Perpignan</p>
+        <h1 class="hero-title">
+          <span class="reveal">Atelier</span>
+          <span class="reveal">Vélo du</span>
+          <span class="hero-title-accent reveal">Vernet</span>
+        </h1>
+        <p class="hero-desc reveal">Apprenez à réparer votre vélo dans notre atelier participatif. Outils pros, bénévoles passionnés, démarche solidaire et écologique.</p>
+        <div class="hero-actions reveal">
+          <a href="#contact" class="btn btn-primary">Nous contacter</a>
+          <a href="https://www.google.com/maps/search/1150+avenue+de+la+salanque,+66000+Perpignan" target="_blank" rel="noopener" class="btn btn-ghost">Nous trouver &rarr;</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="bike.svg" alt="Illustration d'un vélo" class="hero-bike" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MARQUEE ====== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Réparation &bull; Entretien &bull; VTT &bull; Vélo de route &bull; Vélo électrique &bull; Vélo enfant &bull; Atelier participatif &bull; Freins &bull; Dérailleurs &bull; Pneus &bull; Transmission &bull;&nbsp;</span>
+      <span>Réparation &bull; Entretien &bull; VTT &bull; Vélo de route &bull; Vélo électrique &bull; Vélo enfant &bull; Atelier participatif &bull; Freins &bull; Dérailleurs &bull; Pneus &bull; Transmission &bull;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-label reveal">
+          <span class="label-tag">Depuis 2026</span>
+          <h2>Notre<br>mission</h2>
+        </div>
+        <div class="about-body reveal">
+          <p>L'Atelier Vélo du Vernet assure l'entretien et la remise en état de <strong>tous types de vélos</strong> : VTT, vélos de route, vélos de ville, vélos électriques et vélos enfants.</p>
+          <p>Notre atelier participatif met des <strong>outils professionnels</strong> à votre disposition. Nos bénévoles vous guident pas à pas pour apprendre à réparer vous-même.</p>
+          <p>Ouvert à tous, nous nous inscrivons dans une démarche <strong>solidaire et écologique</strong> en faveur de la mobilité douce.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SERVICES ====== -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-heading reveal">Ce qu'on fait</h2>
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <span class="service-num">01</span>
+          <h3>Freins &amp; Dérailleurs</h3>
+          <p>Réparation et réglage de vos systèmes de freinage et de transmission.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-num">02</span>
+          <h3>Pneus &amp; Chambres</h3>
+          <p>Remplacement et réparation de crevaisons, pour tous types de roues.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-num">03</span>
+          <h3>Transmission</h3>
+          <p>Réglage de la chaîne, dérailleur, vitesses et pédalier.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-num">04</span>
+          <h3>Révision complète</h3>
+          <p>Vérification de l'ensemble du vélo, conseils d'entretien personnalisés.</p>
+        </article>
+        <article class="service-card service-card--accent reveal">
+          <span class="service-num">05</span>
+          <h3>Atelier participatif</h3>
+          <p>Apprenez à réparer vous-même avec nos bénévoles et nos outils pros. Ouvert à tous les niveaux.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-num">06</span>
+          <h3>Mobilité douce</h3>
+          <p>Une démarche solidaire et écologique pour remettre les vélos en selle.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HORAIRES ====== -->
+  <section class="horaires" id="horaires">
+    <div class="container">
+      <h2 class="section-heading section-heading--dark reveal">Horaires</h2>
+      <p class="horaires-sub reveal">Lundi au vendredi, de 9h à midi.</p>
+      <div class="horaires-bars">
+        <div class="bar-row reveal">
+          <span class="bar-day">Lun</span>
+          <div class="bar-track"><div class="bar-fill" style="--fill: 100%"></div></div>
+          <span class="bar-time">9h – 12h</span>
+        </div>
+        <div class="bar-row reveal">
+          <span class="bar-day">Mar</span>
+          <div class="bar-track"><div class="bar-fill" style="--fill: 100%"></div></div>
+          <span class="bar-time">9h – 12h</span>
+        </div>
+        <div class="bar-row reveal">
+          <span class="bar-day">Mer</span>
+          <div class="bar-track"><div class="bar-fill" style="--fill: 100%"></div></div>
+          <span class="bar-time">9h – 12h</span>
+        </div>
+        <div class="bar-row reveal">
+          <span class="bar-day">Jeu</span>
+          <div class="bar-track"><div class="bar-fill" style="--fill: 100%"></div></div>
+          <span class="bar-time">9h – 12h</span>
+        </div>
+        <div class="bar-row reveal">
+          <span class="bar-day">Ven</span>
+          <div class="bar-track"><div class="bar-fill" style="--fill: 100%"></div></div>
+          <span class="bar-time">9h – 12h</span>
+        </div>
+        <div class="bar-row bar-row--closed reveal">
+          <span class="bar-day">Sam</span>
+          <div class="bar-track"><div class="bar-fill" style="--fill: 0%"></div></div>
+          <span class="bar-time bar-time--closed">Fermé</span>
+        </div>
+        <div class="bar-row bar-row--closed reveal">
+          <span class="bar-day">Dim</span>
+          <div class="bar-track"><div class="bar-fill" style="--fill: 0%"></div></div>
+          <span class="bar-time bar-time--closed">Fermé</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-heading reveal">Venez nous voir</h2>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="contact-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Adresse</h3>
+          <p>1150 avenue de la Salanque<br>66000 Perpignan</p>
+          <a href="https://www.google.com/maps/search/1150+avenue+de+la+salanque,+66000+Perpignan" target="_blank" rel="noopener" class="contact-link">Google Maps &rarr;</a>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3>Téléphone</h3>
+          <p class="contact-phone"><a href="tel:0777365705">07 77 36 57 05</a></p>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+          </div>
+          <h3>Accessibilité</h3>
+          <p>Entrée, parking, toilettes et places assises accessibles en fauteuil roulant. Parking gratuit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="nav-logo-mark">AVV</span>
+          <span>Atelier Vélo du Vernet</span>
+        </div>
+        <p class="footer-copy">Association bénévole &middot; Perpignan &middot; Depuis janvier 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script>
+    /* --- Scroll reveal --- */
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach((el) => observer.observe(el));
+
+    /* --- Open / Closed status --- */
+    function updateStatus() {
+      const now = new Date();
+      const day = now.getDay();
+      const h = now.getHours();
+      const isOpen = day >= 1 && day <= 5 && h >= 9 && h < 12;
+      const badge = document.getElementById('statusBadge');
+      if (!badge) return;
+      badge.textContent = isOpen ? 'Ouvert' : 'Fermé';
+      badge.className = 'status-indicator ' + (isOpen ? 'is-open' : 'is-closed');
+    }
+    updateStatus();
+    setInterval(updateStatus, 60000);
+
+    /* --- Stagger reveal delays --- */
+    document.querySelectorAll('.services-grid .reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.07) + 's';
+    });
+    document.querySelectorAll('.horaires-bars .reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.06) + 's';
+    });
+  </script>
+
+</body>
+</html>
