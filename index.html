@@ -18,6 +18,9 @@
 </head>
 <body>
 
+  <!-- ====== SKIP NAV ====== -->
+  <a href="#main-content" class="sr-only">Aller au contenu principal</a>
+
   <!-- ====== SVG FILTER FOR GRAIN ====== -->
   <svg style="position:absolute;width:0;height:0" aria-hidden="true">
     <filter id="grain-filter">
@@ -35,14 +38,22 @@
         <span class="nav-logo-mark">AVV</span>
         <span class="nav-logo-text">Atelier Vélo<br>du Vernet</span>
       </a>
-      <div class="nav-links">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu de navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="nav-links" id="nav-menu">
         <a href="#services">Services</a>
         <a href="#horaires">Horaires</a>
         <a href="#contact">Contact</a>
-        <span class="status-indicator" id="statusBadge"></span>
+        <span class="status-indicator" id="statusBadge" role="status"></span>
       </div>
     </div>
   </nav>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main id="main-content">
 
   <!-- ====== HERO ====== -->
   <section class="hero">
@@ -57,7 +68,7 @@
         <p class="hero-desc reveal">Apprenez à réparer votre vélo dans notre atelier participatif. Outils pros, bénévoles passionnés, démarche solidaire et écologique.</p>
         <div class="hero-actions reveal">
           <a href="#contact" class="btn btn-primary">Nous contacter</a>
-          <a href="https://www.google.com/maps/search/1150+avenue+de+la+salanque,+66000+Perpignan" target="_blank" rel="noopener" class="btn btn-ghost">Nous trouver &rarr;</a>
+          <a href="https://www.google.com/maps/search/1150+avenue+de+la+salanque,+66000+Perpignan" target="_blank" rel="noopener" class="btn btn-ghost">Nous trouver <span class="sr-only">(ouvre dans un nouvel onglet)</span>&rarr;</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -184,22 +195,22 @@
       <div class="contact-grid">
         <div class="contact-card reveal">
           <div class="contact-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <h3>Adresse</h3>
           <p>1150 avenue de la Salanque<br>66000 Perpignan</p>
-          <a href="https://www.google.com/maps/search/1150+avenue+de+la+salanque,+66000+Perpignan" target="_blank" rel="noopener" class="contact-link">Google Maps &rarr;</a>
+          <a href="https://www.google.com/maps/search/1150+avenue+de+la+salanque,+66000+Perpignan" target="_blank" rel="noopener" class="contact-link">Google Maps <span class="sr-only">(ouvre dans un nouvel onglet)</span>&rarr;</a>
         </div>
         <div class="contact-card reveal">
           <div class="contact-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
           <h3>Téléphone</h3>
           <p class="contact-phone"><a href="tel:0777365705">07 77 36 57 05</a></p>
         </div>
         <div class="contact-card reveal">
           <div class="contact-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
           </div>
           <h3>Accessibilité</h3>
           <p>Entrée, parking, toilettes et places assises accessibles en fauteuil roulant. Parking gratuit.</p>
@@ -207,6 +218,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ====== FOOTER ====== -->
   <footer class="footer">
@@ -220,6 +233,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- ====== NOSCRIPT FALLBACK ====== -->
+  <noscript>
+    <style>.reveal { opacity: 1; transform: none; }</style>
+  </noscript>
 
   <!-- ====== SCRIPTS ====== -->
   <script>
@@ -248,6 +266,16 @@
     }
     updateStatus();
     setInterval(updateStatus, 60000);
+
+    /* --- Mobile nav toggle --- */
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
 
     /* --- Stagger reveal delays --- */
     document.querySelectorAll('.services-grid .reveal').forEach((el, i) => {
