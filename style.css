@@ -98,6 +98,12 @@ img, svg { display: block; max-width: 100%; }
   border-bottom: 1px solid rgba(240, 234, 214, 0.06);
 }
 
+#services,
+#horaires,
+#contact {
+  scroll-margin-top: 5.5rem;
+}
+
 .nav-inner {
   max-width: 1000px;
   margin: 0 auto;
@@ -287,7 +293,11 @@ img, svg { display: block; max-width: 100%; }
   border-radius: 50px;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   letter-spacing: 0.01em;
 }
 .btn-primary {
@@ -708,6 +718,12 @@ img, svg { display: block; max-width: 100%; }
   }
   .nav-links.is-open { display: flex; }
   .nav-links a { opacity: 0.85; padding: 0.5rem 0; }
+
+  #services,
+  #horaires,
+  #contact {
+    scroll-margin-top: 6rem;
+  }
 
   .bar-row { grid-template-columns: 40px 1fr 64px; gap: 0.6rem; }
   .bar-day { font-size: 0.75rem; }
